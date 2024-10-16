@@ -16,7 +16,7 @@ app.use(cookieParser());
 app.use('/auth',proxy("http://localhost:3000/"))
 app.use('/product',proxy("http://localhost:4000/"))
 app.use('/admin',proxy("http://localhost:5000/"))
-app.use('/cart',proxy("http://localhost:6000/"))
+app.use('/cart',proxy("http://localhost:6001/"))
 
 
 app.listen(PORT,()=>{

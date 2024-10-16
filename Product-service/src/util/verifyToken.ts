@@ -1,12 +1,13 @@
 import jwt from "jsonwebtoken";
 
 export const verifyToken = (token : string) : any => {
-    const secretkey:jwt.Secret =process.env.AUTH_JWT_SECRET as jwt.Secret;
+    const secretkey:jwt.Secret=process.env.AUTH_JWT_SECRET as jwt.Secret
 
     try{
-        console.log("here");
-            const decodedToken = jwt.verify(token,secretkey );
-
+            console.log("reached verify token");
+            console.log(secretkey);
+            
+            const decodedToken = jwt.verify(token,secretkey);
             console.log("🚀 ~ file: verifyToken.ts:8 ~ verifyToken ~ decodedToken:", decodedToken);
             return decodedToken
         

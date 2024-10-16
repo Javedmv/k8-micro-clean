@@ -17,7 +17,7 @@ export const runConsumer = async()=>{
         })
 
         const subscriber:any = createSubscriber();
-        console.log("here.....!");
+        
         await consumer.run({
             eachMessage: async ({ message }) => {
                 const {key,value} = message;

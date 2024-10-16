@@ -11,7 +11,7 @@ export const listProductsController=(dependencies:IDependencies)=>{
         const {useCases:{listProductUseCase}} = dependencies;
         try {
             console.log(req.cookies,'-------------------------')
-            const token : string | any  = req.cookies.user_jwt;
+            const token : string | any  = req.cookies.auth;
             console.log("🚀 ~ file: listProducts.ts:10 ~ returnasync ~ token:", token)
             if(!token){
                 throw new Error('Authentication failed due to token undefined')
